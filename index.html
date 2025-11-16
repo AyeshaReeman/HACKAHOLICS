@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAFE SHIFT AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-blue': {
+                light: '#4A90E2',
+                DEFAULT: '#357ABD',
+                dark: '#2A6192',
+              },
+              'brand-green': '#50E3C2',
+              'brand-background': '#F4F7FA',
+              'status-critical': '#D0021B',
+              'status-high': '#F5A623',
+              'status-moderate': '#F8E71C',
+              'status-normal': '#7ED321',
+            },
+          }
+        }
+      }
+    </script>
+  <style>
+    /* 
+      This CSS block provides a robust fix for the browser's default autofill styling.
+      It forces the background of autofilled inputs to be white and the text to be black,
+      ensuring a clean and consistent UI across browsers like Chrome, Edge, and Brave.
+    */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active {
+        -webkit-text-fill-color: #1f2937; /* Ensures text is dark gray */
+        -webkit-box-shadow: 0 0 0px 1000px #ffffff inset; /* Overlays the browser's color with white */
+        transition: background-color 5000s ease-in-out 0s; /* Prevents a brief color flash */
+        font-family: inherit; /* Ensures the font matches the rest of the form */
+        font-size: inherit;
+    }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-background">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

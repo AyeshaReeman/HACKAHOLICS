@@ -1,0 +1,5 @@
+{
+  "name": "SAFE SHIFT AI",
+  "description": "A smart nurse handoff, lab report, and fatigue detection system designed to improve patient safety and clinician well-being. This application provides AI-powered summaries, tracks critical patient data, and monitors nurse fatigue levels.",
+  "requestFramePermissions": []
+}
